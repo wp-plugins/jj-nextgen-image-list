@@ -115,11 +115,19 @@ class JJ_NGG_Image_List extends WP_Widget
       if($gap != '') {
         if($vertical)
         {
-          $gap_style = " style=\"margin-top: " . $gap . "px;\"";
+          $gap_style = "margin-bottom: " . $gap . "px;";
         }
         else
         {
-          $gap_style = " style=\"margin-left: " . $gap . "px;\"";
+          $gap_style = "margin-right: " . $gap . "px;";
+          if($center == '1')
+          {
+            $gap_style .= " margin-left: " . $gap . "px;";
+          }          
+        }
+        if($gap_style != '')
+        {
+          $gap_style = " style=\"" . $gap_style . "\"";
         }
       }      
       $gap_style_item = '';
@@ -132,7 +140,6 @@ class JJ_NGG_Image_List extends WP_Widget
       }      
       $image_alt = null;
       $image_description = null;
-      $first_image_shown = false;
       foreach($results as $result) 
       {
         $gallery = $wpdb->get_row("SELECT * FROM $wpdb->nggallery WHERE gid = '" . $result->galleryid . "'");
@@ -156,7 +163,7 @@ class JJ_NGG_Image_List extends WP_Widget
           $image_description = $image_alt;
         }
         
-        if($first_image_shown && $gap_style != '') 
+        if($gap_style != '') 
         {
           $gap_style_item = $gap_style;
         }
@@ -200,7 +207,6 @@ class JJ_NGG_Image_List extends WP_Widget
         {  
           $output .= "</li>"; 
         }
-        $first_image_shown = true;            
       }
       if($vertical)
       {
@@ -208,6 +214,22 @@ class JJ_NGG_Image_List extends WP_Widget
       }
       $output .= "\n  </div>";
       $output .= "\n</div>";
+
+      // Add javascript
+      if($order == 'random' && $shuffle == 'true')
+      {
+        $output .= "\n<script type=\"text/javascript\">";   
+        if($vertical)
+        {
+          $output .= "\n  jQuery('div#" . $html_id . " ul.image_list').jj_ngg_shuffle();";       
+        }
+        else
+        {
+          $output .= "\n  jQuery('div#" . $html_id . "').jj_ngg_shuffle();";
+        }
+        $output .= "\n</script>\n";
+      }
+          
     }    
  
     if($shortcode != '1')

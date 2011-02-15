@@ -3,7 +3,7 @@
 Plugin Name: JJ NextGen Image List
 Description: Allows you to pick a gallery from the 'NextGen Gallery' plugin to use with as an Image List. You can list images vertically or horizontally.
 Author: JJ Coder
-Version: 1.0.0
+Version: 1.0.1
 */
 
 if ( ! defined( 'WPJJNGG_IMAGE_LIST_PLUGIN_BASENAME' ) )
