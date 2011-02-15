@@ -1,0 +1,20 @@
+div.image_list_center {
+  text-align: center;
+}
+ul.ul_jj_image_list,
+li.li_jj_image_list,
+ul.image_list, 
+ul.image_list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ul.image_list img,
+ul.image_list li.image_list_item {
+  line-height: 1px;
+  padding: 0;
+  margin: 0;
+}
+ul.image_list img {
+  border: none;
+}
