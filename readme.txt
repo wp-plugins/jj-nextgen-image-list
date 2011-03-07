@@ -1,10 +1,10 @@
 === JJ NextGen Image List ===
 Contributors: JJ Coder
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PSCMPVDADYP74&lc=NZ&item_name=JJNextGenImageList&item_number=jjcoder_image_list&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: http://www.redcross.org.nz/donate
 Tags: image, picture, photo, widgets, gallery, images, nextgen-gallery
 Requires at least: 2.8
-Tested up to: 3.0.5
-Stable tag: 1.0.1
+Tested up to: 3.1
+Stable tag: 1.0.2
 
 Allows you to pick a gallery from the 'NextGen Gallery' plugin to list images from. You can list images vertically or horizontally.
 
@@ -62,9 +62,21 @@ Please refer to the description for requirements and how to use this plugin.
 
 == Frequently Asked Questions ==
 
-None yet.
+Question:
 
-Email: wpjjcoder@gmail.com
+- How can I use plugin inside normal PHP code?
+
+Answer:
+
+- echo do_shortcode('[jj-ngg-image-list html_id="about-image-list" gallery="1" width="200" height="150"]');
+
+Question:
+
+- Doesn't work after upgrade? or Doesn't work with this theme? ... going to give you bad rating if blah blah... etc
+  
+Answer:
+
+- Please check that you don't have two versions of jQuery loading, this is the problem most of the time. Also I don't care if people give me a bad rating... even if its due to some technical fault outside of the scope of the plugin. I made these plugins because I required the functionality and I thought other people might find them useful.
 
 == Screenshots ==
 
@@ -73,9 +85,10 @@ Email: wpjjcoder@gmail.com
 
 == Changelog ==
 
+- 1.0.2: Donate to Christchurch Quake.
 - 1.0.1: Shuffle should be working now. Gap tweaks.
 - 1.0.0: First version.
 
 == Contributors ==
 
-JJ Coder wpjjcoder@gmail.com
+JJ Coder
