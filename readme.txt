@@ -4,7 +4,7 @@ Donate link: http://www.redcross.org.nz/donate
 Tags: image, picture, photo, widgets, gallery, images, nextgen-gallery
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 Allows you to pick a gallery from the 'NextGen Gallery' plugin to list images from. You can list images vertically or horizontally.
 
@@ -72,11 +72,11 @@ Answer:
 
 Question:
 
-- Doesn't work after upgrade? or Doesn't work with this theme? ... going to give you bad rating if blah blah... etc
+- Doesn't work after upgrade? or Doesn't work with this theme?
   
 Answer:
 
-- Please check that you don't have two versions of jQuery loading, this is the problem most of the time. Also I don't care if people give me a bad rating... even if its due to some technical fault outside of the scope of the plugin. I made these plugins because I required the functionality and I thought other people might find them useful.
+- Please check that you don't have two versions of jQuery loading, this is the problem most of the time. Sometimes a theme puts in <br> tags at the end of newlines aswell.
 
 == Screenshots ==
 
@@ -85,6 +85,7 @@ Answer:
 
 == Changelog ==
 
+- 1.0.3: FAQ.
 - 1.0.2: Donate to Christchurch Quake.
 - 1.0.1: Shuffle should be working now. Gap tweaks.
 - 1.0.0: First version.
